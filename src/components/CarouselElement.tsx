@@ -35,7 +35,7 @@ const Carousel: React.FC<CarouselProps> = ({
 	};
 
 	return (
-		<div className='relative'>
+		<div className='relative min-h-[500px]'>
 			<div className='carousel overflow-hidden'>
 				<div
 					className='carousel-inner flex transition-transform duration-500'

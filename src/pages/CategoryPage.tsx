@@ -53,13 +53,13 @@ const CategoryPage = () => {
 				elements={Object.values(images).map((image: any, index) => (
 					<div
 						key={index}
-						className='flex justify-center relative carousel-item flex-shrink-0 w-full max-h-[500px]'
+						className='flex justify-center relative carousel-item flex-shrink-0 w-full max-h-[400px]'
 					>
 						<img
 							key={index}
 							src={image.default}
 							alt={`Image ${index + 1}`}
-							className='max-h-[400px]'
+							className='object-cover h-[400px] w-full'
 						/>
 					</div>
 				))}

@@ -51,7 +51,7 @@ const socials = [
 
 const Footer = () => {
 	return (
-		<footer className='section mt-20'>
+		<footer className='section mt-20 min-h-[400px]'>
 			<div className='container text-[12px] md:text-[16px]'>
 				<div className='lg:grid lg:grid-cols-2'>
 					<div className='mb-10'>
