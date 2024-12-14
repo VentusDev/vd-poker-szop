@@ -41,7 +41,7 @@ const Review = () => {
 					elements={reviewList.map(({ imgSrc, company, content, name }) => (
 						<div
 							key={uuidv4()}
-							className='flex  bg-emerald-700/50 py-5 justify-center relative carousel-item flex-shrink-0 w-full max-h-[500px]'
+							className='flex  py-5 justify-center relative carousel-item flex-shrink-0 w-full max-h-[500px]'
 						>
 							<ReviewCard
 								imgSrc={imgSrc}
