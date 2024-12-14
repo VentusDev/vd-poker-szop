@@ -29,7 +29,7 @@ const ShopingCartSideBar = () => {
 				className='bg-destructive bottom-0 right-0 m-5 z-50 fixed'
 			>
 				<ShoppingCart />
-				<div className='absolute text-[10px] text-emerald-400 size-[26px] items-center justify-center rounded-full'><p>{quantity}</p></div>
+				<div className='absolute text-[10px] text-emerald-400 w-[1px] h-[26px] items-center justify-center rounded-full'><p>{quantity}</p></div>
 			</Button>
             <Sidebar
 				toggleClass={!openCart}

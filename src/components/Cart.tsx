@@ -66,7 +66,7 @@ export function Cart() {
 			</div>
 			<p className='price text-center mb-3'>
 				Podsumowanie koszyka <br />
-				{total} PLN {quantity}
+				{total} PLN
 			</p>
 			<Link className='bg-action absolute bottom-5' to='/zamowienie'>
 				Złóż zamówienie

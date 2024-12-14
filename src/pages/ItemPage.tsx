@@ -94,7 +94,7 @@ const ItemPage = ({}: ItemPageProps) => {
 						/>
 					</div>
 					{imgs.length > 1 && (
-						<div className='flex flex-wrap justify-center'>
+						<div className='flex flex-wrap mx-auto max-md:w-80'>
 							{imgs.map((it) => (
 								<div className='w-20 flex justify-center' 	key={uuidv4()}>
 									<img
