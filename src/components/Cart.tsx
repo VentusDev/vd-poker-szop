@@ -9,7 +9,7 @@ import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
 export function Cart() {
-	const { reset, products, removeProduct, total, quantity } = useStore(
+	const { reset, products, removeProduct, total } = useStore(
 		useShallow((state) => ({
 			reset: state.reset,
 			products: state.products,
