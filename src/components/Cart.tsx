@@ -9,12 +9,13 @@ import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
 export function Cart() {
-	const { reset, products, removeProduct, total } = useStore(
+	const { reset, products, removeProduct, total, quantity } = useStore(
 		useShallow((state) => ({
 			reset: state.reset,
 			products: state.products,
 			removeProduct: state.removeProduct,
 			total: state.total,
+			quantity: state.quantity,
 			address: state.address,
 		}))
 	);
@@ -65,7 +66,7 @@ export function Cart() {
 			</div>
 			<p className='price text-center mb-3'>
 				Podsumowanie koszyka <br />
-				{total} PLN
+				{total} PLN {quantity}
 			</p>
 			<Link className='bg-action absolute bottom-5' to='/zamowienie'>
 				Złóż zamówienie

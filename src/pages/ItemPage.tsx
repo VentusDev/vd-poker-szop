@@ -47,6 +47,10 @@ const ItemPage = ({}: ItemPageProps) => {
 		)
 	);
 
+	const handleSetImg = (it:string) => {
+		setImgState(it)
+	}
+
 	const location = useLocation();
 	useEffect(() => {
 		setImgState(imgs[0]);
@@ -96,7 +100,7 @@ const ItemPage = ({}: ItemPageProps) => {
 									<img
 										src={it}
 										alt={name}
-										onClick={() => setImgState(it)}
+										onClick={() => handleSetImg(it)}
 										className='object-fill w-full object-center h-20 rounded-lg cursor-pointer'
 									/>
 								</div>

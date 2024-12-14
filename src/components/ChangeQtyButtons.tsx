@@ -9,12 +9,13 @@ import toast from 'react-hot-toast';
 type Props = { productId: string };
 
 export function ChangeQtyButtons({ productId }: Props) {
-	const { getProductById, decQty, incQty, setTotal } = useStore(
+	const { getProductById, decQty, incQty, setTotal, setQty } = useStore(
 		useShallow((state) => ({
 			getProductById: state.getProductById,
 			decQty: state.decQty,
 			incQty: state.incQty,
 			setTotal: state.setTotal,
+			setQty: state.setQty
 		}))
 	);
 
@@ -26,6 +27,9 @@ export function ChangeQtyButtons({ productId }: Props) {
 			(products) => {
 				setTotal(
 					products.reduce((acc, item) => acc + item.price * item.qty, 0)
+				);
+				setQty(
+					products.reduce((acc, item) => acc + 1 * item.qty, 0)
 				);
 			},
 			{ fireImmediately: true }

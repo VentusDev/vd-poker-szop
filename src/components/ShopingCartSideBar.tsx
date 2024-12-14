@@ -4,8 +4,15 @@ import { Button } from '@/components/ui/button';
 import { ShoppingCart } from '@/assets/icons/icons';
 import Sidebar from './Sidebar';
 import { useLocation } from 'react-router-dom';
+import { useShallow } from 'zustand/react/shallow';
+import { useStore } from '@/store/store';
 
 const ShopingCartSideBar = () => {
+		const {  quantity } = useStore(
+			useShallow((state) => ({
+				quantity: state.quantity,
+			}))
+		);
 	const [openCart, setOpenCart] = useState(false);
 
 	const location = useLocation();
@@ -22,6 +29,7 @@ const ShopingCartSideBar = () => {
 				className='bg-destructive bottom-0 right-0 m-5 z-50 fixed'
 			>
 				<ShoppingCart />
+				<div className='absolute text-[10px] text-emerald-400 size-[26px] items-center justify-center rounded-full'><p>{quantity}</p></div>
 			</Button>
             <Sidebar
 				toggleClass={!openCart}

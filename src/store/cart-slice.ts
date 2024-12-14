@@ -6,6 +6,7 @@ import { Product } from '@/types/product';
 type CartState = {
 	products: CartProduct[];
 	total: number;
+	quantity: number
 };
 
 type CartActions = {
@@ -15,6 +16,7 @@ type CartActions = {
 	decQty: (productId: string) => void;
 	getProductById: (productId: string) => CartProduct | undefined;
 	setTotal: (total: number) => void;
+	setQty: (quantity: number) => void;
 	reset: () => void;
 };
 
@@ -23,6 +25,7 @@ export type CartSlice = CartState & CartActions;
 const initialState: CartState = {
 	products: [],
 	total: 0,
+	quantity: 0
 };
 export const createCartSlice: StateCreator<
 	CartSlice,
@@ -70,6 +73,9 @@ export const createCartSlice: StateCreator<
 		set((state) => {
 			state.total = total;
 		}),
-
+		setQty: (quantity) =>
+			set((state) => {
+				state.quantity = quantity;
+			}),
 	reset: () => set(() => initialState),
 });

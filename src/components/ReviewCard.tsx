@@ -16,7 +16,7 @@ type ReviewCardProps = {
 
 const ReviewCard = ({ imgSrc, company, content, name }: ReviewCardProps) => {
 	return (
-        <div className='glass-bg p-5 rounded-xl w-[320px] flex flex-col lg:w-[500px]'>
+        <div className='glass-bg p-5 rounded-xl w-[300px] flex flex-col lg:w-[500px]'>
 
       
 		<div className='flex items-center gap-1 mb-3'>
@@ -31,7 +31,7 @@ const ReviewCard = ({ imgSrc, company, content, name }: ReviewCardProps) => {
         </p>
         <div className="flex items-center gap-2 mt-auto">
             <figure className='img-box rounded-lg'>
-                <img src={`/img/reviews/${imgSrc}`} alt={name} width={44} height={44} loading='lazy' className='img-cover max-h-[60px]'/>
+                <img src={`/img/reviews/${imgSrc}`} alt={name} width={44} height={44} loading='lazy' className='img-cover max-h-[60px] max-w-[60px]'/>
             </figure>
 
             <div>

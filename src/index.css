@@ -135,7 +135,7 @@ input[type='checkbox']:checked ~ .back {
 /* utilities */
 
 .container {
-	@apply px-4 mx-auto lg:px-8 xl:max-w-6xl;
+	@apply px-4 mx-auto lg:px-8 max-w-[95vw] xl:max-w-6xl;
 }
 
 .img-box {
